@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Generator — Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:#f4efe8;color:#111;font-family:"DM Sans",Arial,sans-serif;display:grid;place-items:center;padding:20px}
+    .box{width:min(100%,480px);background:#fffdf9;border:1px solid #ded5cb;border-radius:24px;padding:26px;box-shadow:0 15px 50px rgba(0,0,0,.07)}
+    h1{font-size:34px;margin:0 0 7px;letter-spacing:-.05em}
+    p{color:#6d6963;font-size:13px;line-height:1.5;margin:0 0 22px}
+    label{font-size:12px;font-weight:700;display:block;margin-bottom:7px}
+    .row{display:flex;gap:8px}
+    input{flex:1;min-width:0;height:46px;padding:0 13px;border:1px solid #cfc7be;border-radius:12px;background:#fff;font:inherit;outline:none}
+    button{height:46px;border:0;border-radius:12px;background:#111;color:#fff;padding:0 17px;font:700 12px inherit;cursor:pointer}
+    #qrcode{display:grid;place-items:center;margin:24px auto 15px;min-height:20px}
+    #qrcode img{max-width:100%;height:auto}
+    .download{display:none;width:100%;text-align:center;text-decoration:none;padding:13px;border:1px solid #111;border-radius:12px;color:#111;font-size:12px;font-weight:700}
+    .hint{background:#f4efe8;padding:12px;border-radius:12px;font-size:11px;margin-top:15px}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>QR MENU</h1>
+    <p>Masukkan URL website menu setelah kamu deploy. QR ini bisa dicetak untuk ditempel di meja/kasir.</p>
+
+    <label for="url">URL WEBSITE MENU</label>
+    <div class="row">
+      <input id="url" type="url" placeholder="https://namatoko.netlify.app">
+      <button id="generate">Generate</button>
+    </div>
+
+    <div id="qrcode"></div>
+    <a id="download" class="download" download="qr-menu.png">Download QR Code</a>
+
+    <div class="hint">
+      <strong>Tips:</strong> gunakan URL HTTPS dari Netlify/Vercel/GitHub Pages. Jangan gunakan <code>localhost</code> jika QR akan discan dari HP orang lain.
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    const urlInput = document.getElementById("url");
+    const button = document.getElementById("generate");
+    const qrBox = document.getElementById("qrcode");
+    const download = document.getElementById("download");
+
+    const currentSite = new URL("index.html", window.location.href).href;
+    urlInput.value = currentSite;
+
+    function generateQR() {
+      const url = urlInput.value.trim();
+      if (!url) return;
+
+      qrBox.innerHTML = "";
+      new QRCode(qrBox, {
+        text: url,
+        width: 240,
+        height: 240,
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      setTimeout(() => {
+        const canvas = qrBox.querySelector("canvas");
+        const img = qrBox.querySelector("img");
+        const dataUrl = canvas ? canvas.toDataURL("image/png") : (img ? img.src : "");
+        if (dataUrl) {
+          download.href = dataUrl;
+          download.style.display = "block";
+        }
+      }, 300);
+    }
+
+    button.addEventListener("click", generateQR);
+    urlInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") generateQR();
+    });
+
+    generateQR();
+  </script>
+</body>
+</html>
