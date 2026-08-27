@@ -3,85 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#f4efe8">
+  <meta name="theme-color" content="#f7efe2">
   <meta name="description" content="Digital menu coffee shop yang dapat dibuka melalui QR Code.">
-  <title>MENU</title>
+
+  <title>TAKATO - MENU</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- HERO -->
   <header class="hero">
-    <div class="hero-top">
-      <span class="eyebrow">DIGITAL MENU</span>
-      <span class="status-dot">OPEN</span>
+
+    <div class="logo-wrapper">
+      <img 
+        src="assets/logo-takato.png" 
+        alt="TAKA TO Workshop"
+        class="logo"
+      >
     </div>
-    <h1>MENU<span>.</span></h1>
-    <p>Good coffee, good food, good mood.</p>
+
+    <p class="hero-description">
+      Good coffee, good food, good mood.
+    </p>
+
   </header>
 
+
   <main>
+
+    <!-- WELCOME -->
     <section class="welcome-card">
       <div>
         <span class="small-label">WELCOME</span>
         <h2>Choose your favorite.</h2>
       </div>
+
       <div class="cup-icon">☕</div>
     </section>
 
+
+    <!-- SEARCH -->
     <div class="search-wrap">
       <span>⌕</span>
-      <input id="searchInput" type="search" placeholder="Cari menu..." aria-label="Cari menu">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Cari menu..."
+        aria-label="Cari menu"
+      >
     </div>
 
-    <nav class="category-nav" id="categoryNav" aria-label="Kategori menu">
-      <button class="category-btn active" data-category="all">All</button>
-      <button class="category-btn" data-category="coffee">Coffee</button>
-      <button class="category-btn" data-category="signature">Signature</button>
-      <button class="category-btn" data-category="refreshing">Refreshing</button>
-      <button class="category-btn" data-category="noncoffee">Non Coffee</button>
-      <button class="category-btn" data-category="maincourse">Main Course</button>
-      <button class="category-btn" data-category="snack">Snack</button>
+
+    <!-- CATEGORY -->
+    <nav
+      class="category-nav"
+      id="categoryNav"
+      aria-label="Kategori menu"
+    >
+
+      <button
+        class="category-btn active"
+        data-category="all"
+      >
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="coffee"
+      >
+        Coffee
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="signature"
+      >
+        Signature
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="refreshing"
+      >
+        Refreshing
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="noncoffee"
+      >
+        Non Coffee
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="maincourse"
+      >
+        Main Course
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="snack"
+      >
+        Snack
+      </button>
+
     </nav>
 
+
+    <!-- MENU -->
     <section class="menu-section">
+
       <div class="section-heading">
+
         <div>
           <span class="section-number">01</span>
-          <h2 id="sectionTitle">Coffee</h2>
+
+          <h2 id="sectionTitle">
+            Coffee
+          </h2>
         </div>
-        <span id="itemCount" class="item-count"></span>
+
+        <span
+          id="itemCount"
+          class="item-count"
+        ></span>
+
       </div>
-      <div id="menuGrid" class="menu-grid"></div>
+
+
+      <div
+        id="menuGrid"
+        class="menu-grid"
+      ></div>
+
     </section>
 
+
+    <!-- ADD ON -->
     <section class="addon">
-      <div class="addon-title">ADD ON</div>
-      <div class="addon-item"><span>Air Mineral</span><strong>5K</strong></div>
-      <div class="addon-item"><span>Sea Salt Cream</span><strong>6K</strong></div>
+
+      <div class="addon-title">
+        ADD ON
+      </div>
+
+      <div class="addon-item">
+        <span>Air Mineral</span>
+        <strong>5K</strong>
+      </div>
+
+      <div class="addon-item">
+        <span>Sea Salt Cream</span>
+        <strong>6K</strong>
+      </div>
+
     </section>
+
   </main>
 
-  <footer>
-    <p>Thank you for visiting ♡</p>
-    <small>Scan the QR anytime to view our menu.</small>
-  </footer>
 
-  <div id="detailModal" class="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close="true"></div>
+  <!-- FOOTER -->
+<footer>
+  <p>Thank you for visiting ♡</p>
+  
+  <small>Scan the QR anytime to view our menu.</small>
+  
+  <a href="https://www.instagram.com/taka.to_warkop/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+    <span class="instagram-icon">◎</span>
+    @taka.to_warkop
+  </a>
+</footer>
+
+
+  <!-- DETAIL MODAL -->
+  <div
+    id="detailModal"
+    class="modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-backdrop"
+      data-close="true"
+    ></div>
+
+
     <div class="modal-sheet">
-      <button class="modal-close" data-close="true" aria-label="Tutup">×</button>
-      <img id="modalImage" src="" alt="">
+
+      <button
+        class="modal-close"
+        data-close="true"
+        aria-label="Tutup"
+      >
+        ×
+      </button>
+
+
+      <img
+        id="modalImage"
+        src=""
+        alt=""
+      >
+
+
       <div class="modal-content">
-        <span id="modalCategory" class="modal-category"></span>
+
+        <span
+          id="modalCategory"
+          class="modal-category"
+        ></span>
+
         <h2 id="modalName"></h2>
+
         <p id="modalDescription"></p>
-        <strong id="modalPrice" class="modal-price"></strong>
+
+        <strong
+          id="modalPrice"
+          class="modal-price"
+        ></strong>
+
       </div>
+
     </div>
+
   </div>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
