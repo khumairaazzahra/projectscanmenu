@@ -9,18 +9,95 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;background:#f4efe8;color:#111;font-family:"DM Sans",Arial,sans-serif;display:grid;place-items:center;padding:20px}
-    .box{width:min(100%,480px);background:#fffdf9;border:1px solid #ded5cb;border-radius:24px;padding:26px;box-shadow:0 15px 50px rgba(0,0,0,.07)}
-    h1{font-size:34px;margin:0 0 7px;letter-spacing:-.05em}
-    p{color:#6d6963;font-size:13px;line-height:1.5;margin:0 0 22px}
-    label{font-size:12px;font-weight:700;display:block;margin-bottom:7px}
-    .row{display:flex;gap:8px}
-    input{flex:1;min-width:0;height:46px;padding:0 13px;border:1px solid #cfc7be;border-radius:12px;background:#fff;font:inherit;outline:none}
-    button{height:46px;border:0;border-radius:12px;background:#111;color:#fff;padding:0 17px;font:700 12px inherit;cursor:pointer}
-    #qrcode{display:grid;place-items:center;margin:24px auto 15px;min-height:20px}
-    #qrcode img{max-width:100%;height:auto}
-    .download{display:none;width:100%;text-align:center;text-decoration:none;padding:13px;border:1px solid #111;border-radius:12px;color:#111;font-size:12px;font-weight:700}
-    .hint{background:#f4efe8;padding:12px;border-radius:12px;font-size:11px;margin-top:15px}
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#f4efe8;
+      color:#111;
+      font-family:"DM Sans",Arial,sans-serif;
+      display:grid;
+      place-items:center;
+      padding:20px
+    }
+    .box{
+      width:min(100%,480px);
+      background:#fffdf9;
+      border:1px solid #ded5cb;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 15px 50px rgba(0,0,0,.07)
+    }
+    h1{
+      font-size:34px;
+      margin:0 0 7px;
+      letter-spacing:-.05em
+    }
+    p{
+      color:#6d6963;
+      font-size:13px;
+      line-height:1.5;
+      margin:0 0 22px
+    }
+    label{
+      font-size:12px;
+      font-weight:700;
+      display:block;
+      margin-bottom:7px
+    }
+    .row{
+      display:flex;
+      gap:8px
+    }
+    input{
+      flex:1;
+      min-width:0;
+      height:46px;
+      padding:0 13px;
+      border:1px solid #cfc7be;
+      border-radius:12px;
+      background:#fff;
+      font:inherit;
+      outline:none
+    }
+    button{
+      height:46px;
+      border:0;
+      border-radius:12px;
+      background:#111;
+      color:#fff;
+      padding:0 17px;
+      font:700 12px inherit;
+      cursor:pointer
+    }
+    #qrcode{
+      display:grid;
+      place-items:center;
+      margin:24px auto 15px;
+      min-height:20px
+    }
+    #qrcode img{
+      max-width:100%;
+      height:auto
+    }
+    .download{
+      display:none;
+      width:100%;
+      text-align:center;
+      text-decoration:none;
+      padding:13px;
+      border:1px solid #111;
+      border-radius:12px;
+      color:#111;
+      font-size:12px;
+      font-weight:700
+    }
+    .hint{
+      background:#f4efe8;
+      padding:12px;
+      border-radius:12px;
+      font-size:11px;
+      margin-top:15px
+    }
   </style>
 </head>
 <body>
