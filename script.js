@@ -3,7 +3,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Espresso",
-    price: "5K",
+    price: "7K",
     description: "Espresso, water & optional sugar",
     image: "assets/Espresso.jpe"
   },
@@ -11,7 +11,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Americano",
-    price: "16K",
+    price: "19K",
     description: "Espresso, water & optional sugar",
     image: "assets/Americano.jpe"
   },
@@ -19,7 +19,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Coffee Latte",
-    price: "19K",
+    price: "21K",
     description: "Espresso, full cream milk & optional sugar",
     image: "assets/Coffee Latte.jpe"
   },
@@ -27,7 +27,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Kopi Susu Caramel",
-    price: "22K",
+    price: "24K",
     description: "Espresso, full cream milk & caramel syrup",
     image: "assets/Kopi Susu Caramel.jpe"
   },
@@ -35,7 +35,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Kopi Susu Vanilla",
-    price: "22K",
+    price: "24K",
     description: "Espresso, full cream milk & vanilla syrup",
     image: "assets/Kopi Susu Vanila1.jpg"
   },
@@ -43,7 +43,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Kopi Susu Mocha",
-    price: "23K",
+    price: "25K",
     description: "Espresso, full cream milk, chocolate & sugar",
     image: "assets/Kopi Susu Mocha.jpe"
   },
@@ -59,7 +59,7 @@ const menus = [
     category: "coffee",
     categoryName: "Coffee",
     name: "Kopi Milo",
-    price: "18K",
+    price: "21K",
     description: "Espresso & Milo",
     image: "assets/Kopi Milo.jpe"
   },
@@ -75,7 +75,7 @@ const menus = [
     category: "signature",
     categoryName: "Signature",
     name: "Kopi Susu Gula Aren",
-    price: "20K",
+    price: "21K",
     description: "Espresso, full cream milk & palm sugar",
     image: "assets/Kopi Susu Gula Aren.jpe"
   },
@@ -83,7 +83,7 @@ const menus = [
     category: "signature",
     categoryName: "Signature",
     name: "Kopi Susu Hazelnut",
-    price: "22K",
+    price: "24K",
     description: "Espresso, full cream milk & hazelnut syrup",
     image: "assets/Kopi Susu Hazelnut.jpe"
   },
@@ -91,15 +91,31 @@ const menus = [
     category: "signature",
     categoryName: "Signature",
     name: "Kopi Susu Butterscotch",
-    price: "22K",
+    price: "24K",
     description: "Espresso, full cream milk & butterscotch syrup",
     image: "assets/Kopi Susu Butterscotch.jpe"
+  },
+  {
+    category: "sparkling-coffee",
+    categoryName: "sparkling coffee",
+    name: "Orange Coffee Sparkling",
+    price: "22K",
+    description: "Espresso, Orange Syrup, soda & ice",
+    image: "assets/Orange Coffee Sparkling.png"
+  },
+  {
+    category: "sparkling-coffee",
+    categoryName: "sparkling coffee",
+    name: "Lemon Coffee Sparkling",
+    price: "22K",
+    description: "Espresso, lemon, soda & ice",
+    image: "assets/Lemon Coffee Sparkling.png"
   },
   {
     category: "refreshing",
     categoryName: "Refreshing",
     name: "Mango Breeze",
-    price: "18K",
+    price: "19K",
     description: "Mango syrup, soda, ice & basil seeds",
     image: "assets/Mango Breeze.jpe"
   },
@@ -107,15 +123,23 @@ const menus = [
     category: "refreshing",
     categoryName: "Refreshing",
     name: "Mango Fresh Mild",
-    price: "19K",
+    price: "20K",
     description: "Mango syrup, full cream milk, ice & basil seeds",
     image: "assets/Mango Fresh Mild.jpe"
   },
   {
     category: "noncoffee",
     categoryName: "Non Coffee",
-    name: "Milo",
+    name: "lemon Tea",
     price: "18K",
+    description: "Milo & fresh milk",
+    image: "assets/Lemon Tea.png"
+  },
+  {
+    category: "noncoffee",
+    categoryName: "Non Coffee",
+    name: "Milo",
+    price: "20K",
     description: "Milo & fresh milk",
     image: "assets/Milo.jpe"
   },
@@ -123,7 +147,7 @@ const menus = [
     category: "noncoffee",
     categoryName: "Non Coffee",
     name: "Matcha Latte",
-    price: "22K",
+    price: "25K",
     description: "Matcha, fresh milk & ice",
     image: "assets/Matcha Latte.jpe"
   },
@@ -131,7 +155,7 @@ const menus = [
     category: "noncoffee",
     categoryName: "Non Coffee",
     name: "Chocolate Latte",
-    price: "25K",
+    price: "26K",
     description: "Chocolate, fresh milk & ice",
     image: "assets/Chocolate Latte.jpe"
   },
@@ -173,7 +197,7 @@ const menus = [
   {
     category: "maincourse",
     categoryName: "Main Course",
-    name: "MieNas",
+    name: "Mie Nas",
     price: "20K",
     image: "assets/Mie Nas.jpe"
   },
@@ -211,6 +235,27 @@ const menus = [
     name: "Pempek",
     price: "15K",
     image: "assets/Pempek.jpe"
+  },
+  {
+    category: "snack",
+    categoryName: "Snack",
+    name: "Cireng",
+    price: "15K",
+    image: "assets/Cireng.png"
+  },
+  {
+    category: "snack",
+    categoryName: "Snack",
+    name: "Nugget",
+    price: "15K",
+    image: "assets/Nugget.png"
+  },
+  {
+    category: "snack",
+    categoryName: "Snack",
+    name: "Fish Roll",
+    price: "15K",
+    image: "assets/Fish Roll.png"
   }
 ];
 
